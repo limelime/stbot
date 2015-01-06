@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Stock">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="F:/workspace/eclipse_ws/Stock/Stock.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="org.stbot.stock.scheduler.Exchange"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="F:/workspace/eclipse_ws/Stock/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/apache-log4j-1.2.15/log4j-1.2.15.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/hibernate-distribution-3.3.2.GA/hibernate3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/hibernate-distribution-3.3.2.GA/required/antlr-2.7.6.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/hibernate-distribution-3.3.2.GA/required/commons-collections-3.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/hibernate-distribution-3.3.2.GA/required/dom4j-1.6.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/hibernate-distribution-3.3.2.GA/required/javassist-3.9.0.GA.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/hibernate-distribution-3.3.2.GA/required/jta-1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/hibernate-distribution-3.3.2.GA/required/slf4j-api-1.5.8.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/mysql-connector-java-5.1.7/mysql-connector-java-5.1.7-bin.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/slf4j-1.5.8/slf4j-log4j12-1.5.8.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/SuperCSV/SuperCSV-1.52.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/SuperCSV/spiffy-with_source-all-0.05.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/testng-5.9/testng-5.9-jdk15.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/proxy-vole_20120920_bin/js.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="F:/workspace/eclipse_ws/Stock/lib/proxy-vole_20120920_bin/proxy-vole_20120920.jar"/>
+        </jar>
+    </target>
+</project>

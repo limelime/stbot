@@ -1,0 +1,30 @@
+<?xml  version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.stbot.score.model.Rule" table="Rules">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+    <property name="date" />
+    <property name="weight" /> <!-- the weight(ratio) of the rule relative to other rules, bigger is better. It is a multiplier. -->
+    <property name="description" /> <!-- Detailed explanation of the rule. -->
+  </class>
+  
+</hibernate-mapping>
+<!--
+
+drop table Rules;
+CREATE TABLE Rules (
+  id INT(10) NOT NULL AUTO_INCREMENT,
+  date DATE NOT NULL,
+  unit NUMERIC(12,4) NOT NULL,
+  weight NUMERIC(12,4) NOT NULL,
+  description TEXT,
+  PRIMARY KEY(id)
+); 
+
+-->

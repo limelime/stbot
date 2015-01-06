@@ -1,0 +1,44 @@
+<?xml  version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.stbot.stock.model.General" table="Generals" dynamic-update="true" dynamic-insert="true" select-before-update="true">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+    <property name="cie_id" />
+    <property name="date" />
+    <property name="name" />
+    <property name="status" /><!-- inactive, history= don't update price, active = update price, display = update price, nodisplay = display prices-->
+    <property name="securityType" />
+    <property name="exchange" />
+    <property name="outstanding" />
+    <property name="marketValue" />
+    <property name="description" />
+    <property name="ipoyear" />
+    <property name="sector" />
+    <property name="industry" />
+  </class>
+
+</hibernate-mapping>
+
+<!--
+drop table Generals;
+CREATE TABLE Generals (
+  id INT(10) NOT NULL AUTO_INCREMENT,
+  cie_id INT NOT NULL, 
+  date DATE NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  status INT NOT NULL, 
+  securityType VARCHAR(255),
+  exchange VARCHAR(50) NOT NULL,
+  outstanding BIGINT,
+  marketValue NUMERIC(20,4),
+  description TEXT,
+  PRIMARY KEY(id),
+  FOREIGN KEY (cie_id) REFERENCES Cies(id)
+);  
+-->

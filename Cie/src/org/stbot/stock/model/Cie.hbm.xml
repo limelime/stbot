@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+  
+<hibernate-mapping package="Cie">
+  <class name="org.stbot.stock.model.Cie" table="Cies">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+  </class>
+</hibernate-mapping>
+
+<!--
+drop table Cies;
+CREATE TABLE Cies (
+  id INT(10) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY(id)
+);  
+-->

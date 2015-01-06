@@ -1,0 +1,36 @@
+<?xml  version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.stbot.stock.model.Job" table="Jobs">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+    <property name="cie_id" />
+    <property name="dateTime" />
+    <property name="status" /> <!-- Integer: Type of error status -->
+    <property name="message" /> <!-- More info on the error status -->
+  </class>
+  
+</hibernate-mapping>
+
+<!--
+
+drop table Jobs;
+CREATE TABLE Jobs (
+  id INT(10) NOT NULL AUTO_INCREMENT,
+  cie_id INT NOT NULL, 
+  dateTime DATETIME NOT NULL,
+  status INT,
+  message TEXT,
+  PRIMARY KEY(id),
+  FOREIGN KEY (cie_id) REFERENCES Cies(id)
+); 
+
+
+INSERT INTO Jobs(cie_id, date, status, message) VALUES(1, '2009-07-16', 1, 'message');
+INSERT INTO Jobs(cie_id, date, status, message) VALUES(2, '2009-07-16', 1, 'message');
+-->

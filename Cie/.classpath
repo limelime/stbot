@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="lib" path="lib/apache-log4j-1.2.15/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-distribution-3.3.2.GA/hibernate3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-distribution-3.3.2.GA/required/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-distribution-3.3.2.GA/required/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-distribution-3.3.2.GA/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-distribution-3.3.2.GA/required/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-distribution-3.3.2.GA/required/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-distribution-3.3.2.GA/required/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.7/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-1.5.8/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry kind="lib" path="lib/SuperCSV/SuperCSV-1.52.jar"/>
+	<classpathentry kind="lib" path="lib/SuperCSV/spiffy-with_source-all-0.05.jar"/>
+	<classpathentry kind="lib" path="lib/testng-5.9/testng-5.9-jdk15.jar"/>
+	<classpathentry kind="lib" path="lib/proxy-vole_20120920_bin/proxy-vole_20120920.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

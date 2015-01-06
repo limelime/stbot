@@ -1,0 +1,30 @@
+<?xml  version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.stbot.stock.model.Finance" table="Finances" dynamic-update="true" dynamic-insert="true" select-before-update="true">
+    <id name="cie_id" column="cie_id" />
+    
+    <property name="date" />
+    <property name="targetPrice" />
+    <property name="floatShare" />
+    
+  </class>
+  
+</hibernate-mapping>
+<!--
+
+drop table Symbols;
+CREATE TABLE Finances (
+       id INT(10) NOT NULL AUTO_INCREMENT
+     , cie_id INT(10) NOT NULL
+     , targetPrice NUMERIC(20, 4)
+     , PRIMARY KEY (id)
+     , INDEX (cie_id)
+     , CONSTRAINT FK_Finances_1 FOREIGN KEY (cie_id)
+                  REFERENCES Cies (id)
+);
+-->

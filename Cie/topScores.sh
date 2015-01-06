@@ -1,0 +1,1 @@
+mysql -uroot -pmypassword stock -e "select Symbols.cie_id, Symbol, sum(realpoint), count(rule_id) from Scores inner join Symbols on Symbols.cie_id=Scores.cie_id group by cie_id order by sum(realpoint) desc limit 100;" > topScores.txt

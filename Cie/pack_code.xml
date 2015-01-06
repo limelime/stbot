@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="pack_code" name="Stock">
+	<!--=======================
+	  PACKING EVERYTHING.
+	  =======================-->
+	<tstamp>
+		<format property="DAY_TIME_NOW" pattern="yyyy-MM-dd_HH.mm.ss" />
+	</tstamp>
+	<target name="pack_code" description="Packing everything.">
+		<tar compression="gzip" destfile="archives/codes/${ant.project.name}_Code_${DAY_TIME_NOW}.tar.gz" 
+	      basedir="." 
+	      excludes="db/**, archives/**, bugs/**, Stock*.jar"  
+	    />
+		<!--
+	    <exec executable="rar">
+	      <arg line="a -v4900k -m5 ${ant.project.name}_${DAY_TIME_NOW}.rar ${ant.project.name}_${DAY_TIME_NOW}.tar.gz"/>
+	    </exec>
+	    <delete file="${ant.project.name}_${DAY_TIME_NOW}.tar.gz" />
+	  	-->
+	</target>
+
+	<!--
+	  <target name="pack" description="Packing everything.">
+	    <tar compression="gzip" destfile="${ant.project.name}_All_${DAY_TIME_NOW}.tar.gz" 
+	      basedir="." 
+	    />
+	  </target>
+	  -->
+</project>

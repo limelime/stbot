@@ -1,0 +1,10 @@
+select * from Prices180 where cie_id=11 order by desc limit 1;
+
+-- Show indexes.
+SHOW INDEX FROM Prices180;
+
+-- Create index.
+CREATE INDEX idx_prices180_cie_id_date ON Prices180(cie_id, date);
+
+-- Check whether it is fast.
+select * from Prices180 where cie_id=11 order by desc limit 1; 

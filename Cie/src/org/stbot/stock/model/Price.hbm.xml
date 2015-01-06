@@ -1,0 +1,38 @@
+<?xml  version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.stbot.stock.model.Price" table="Prices">
+    <composite-id>
+      <key-property name="cie_id"/>
+      <key-property name="date"/>
+    </composite-id> 
+
+    <property name="open" />
+    <property name="high" />
+    <property name="low" />
+    <property name="close" />
+    <property name="volume" />
+    <property name="adjClose" />
+  </class>
+  
+</hibernate-mapping>
+
+<!--
+drop table Prices;
+CREATE TABLE Prices (
+  cie_id INT NOT NULL, 
+  date DATE NOT NULL,
+  open NUMERIC(12,4) NOT NULL,
+  high NUMERIC(12,4) NOT NULL,
+  low NUMERIC(12,4) NOT NULL,
+  close NUMERIC(12,4) NOT NULL,
+  volume BIGINT NOT NULL,
+  adjClose NUMERIC(12,4),
+  PRIMARY KEY(cie_id, date),
+  FOREIGN KEY (cie_id) REFERENCES Cies(id)
+); 
+-->

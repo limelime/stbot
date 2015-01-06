@@ -1,0 +1,1 @@
+java -cp Stock.jar org.stbot.score.scheduler.Scores

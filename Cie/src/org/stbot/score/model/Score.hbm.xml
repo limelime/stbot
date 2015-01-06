@@ -1,0 +1,38 @@
+<?xml  version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.stbot.score.model.Score" table="Scores">
+    <composite-id>
+      <key-property name="cie_id"/>
+      <key-property name="rule_id"/>
+    </composite-id> 
+    <property name="date" />
+    <property name="point" /><!-- Point without the rule weight -->
+    <property name="realpoint" /><!-- Point with the rule weight = Point * weight -->
+  </class>
+  
+</hibernate-mapping>
+
+<!--
+
+
+
+drop table PointSystems;
+CREATE TABLE PointSystems (
+  cie_id INT NOT NULL, 
+  rule_id INT NOT NULL, 
+  date DATE NOT NULL,
+  parameter VARCHAR(255),
+  point NUMERIC(12,4) NOT NULL,
+  PRIMARY KEY(cie_id, rule_id),
+  FOREIGN KEY (cie_id) REFERENCES Cies(id),
+  FOREIGN KEY (rule_id) REFERENCES Rules(id)
+); 
+
+
+
+-->
